@@ -4,8 +4,9 @@ import { toast } from 'react-hot-toast';
 
 import * as API from '../../services/api';
 
+import { Container } from '../../components/Container/Container';
 import MovieList from '../../components/MovieList/MovieList';
-import { Main, SectionTitle } from '../Home/Home.styled';
+import { Main, SectionTitle, SectionText, Title } from '../Home/Home.styled';
 
 const Home = () => {
   const [trending, setTrending] = useState([]);
@@ -25,8 +26,18 @@ const Home = () => {
 
   return (
     <Main>
-      <SectionTitle>Trending movies</SectionTitle>
-      <MovieList movies={trending} />
+      <section style={{ marginTop: '80px' }}>
+        <Container>
+          <SectionTitle>Movies</SectionTitle>
+          <SectionText>
+            Movies move us like nothing else can, whether they’re scary, funny,
+            dramatic, romantic or anywhere in-between. So many titles, so much
+            to experience.
+          </SectionText>
+          <Title>Popular on Movie Room</Title>
+          <MovieList movies={trending} />
+        </Container>
+      </section>
     </Main>
   );
 };

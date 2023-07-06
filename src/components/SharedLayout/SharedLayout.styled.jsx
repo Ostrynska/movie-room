@@ -2,44 +2,53 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import BeatLoader from 'react-spinners/BeatLoader';
 
-export const Container = styled.div`
-  max-width: 1660px;
-  margin: auto;
-  max-width: 100%;
-`;
-
 export const Header = styled.header`
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  ${'' /* height: 24 px; */}
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  background-color: #000;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 100%;
-  padding: 0 2rem;
-  height: 4rem;
-
-  > nav {
+  padding: 16px 3%;
+  position: fixed;
+  nav {
     display: flex;
-    gap: 15px;
   }
-`;
-
-export const Logo = styled.p`
-  font-weight: 700;
-  margin: 0;
 `;
 
 export const Link = styled(NavLink)`
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-
+  border: 1px solid #888;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 14px;
+  margin: 0 0 0 8px;
+  padding: 9px 20px;
   &.active {
-    color: white;
-    font-weight: 700;
-    background-color: #301934;
+    min-height: 0;
+    font-size: 14px;
+    margin: 0 0 0 8px;
+    padding: 9px 20px;
+    background-color: #e50914;
+    background-image: linear-gradient(180deg, #e50914, #db0510);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    color: #fff;
+
+    border-radius: 2px;
+    border: none;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
   }
+`;
+
+export const BtnWrap = styled.div`
+  display: flex;
+  margin-left: auto;
+  gap: 8px;
 `;
 
 export const Loading = styled(BeatLoader)`

@@ -5,6 +5,7 @@ import { toast } from 'react-hot-toast';
 
 import * as API from '../../services/api';
 
+import { Container } from '../../components/Container/Container';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import MovieList from '../../components/MovieList/MovieList';
 import { Main, MoviesSection } from './Movie.styled';
@@ -42,13 +43,15 @@ const Movies = () => {
 
   return (
     <Main>
-      <MoviesSection>
-        <SearchBox
-          value={query}
-          onChange={handleChange}
-          onSubmit={handleSubmit}
-        />
-        <MovieList movies={movies} />
+      <MoviesSection style={{ marginTop: '80px' }}>
+        <Container>
+          <SearchBox
+            value={query}
+            onChange={handleChange}
+            onSubmit={handleSubmit}
+          />
+          <MovieList movies={movies} />
+        </Container>
       </MoviesSection>
     </Main>
   );

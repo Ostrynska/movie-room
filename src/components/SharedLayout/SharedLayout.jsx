@@ -1,25 +1,35 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { Container, Logo, Header, Link, Loading } from './SharedLayout.styled';
+import { NavLink } from 'react-router-dom';
+
+import { Container } from '../Container/Container';
+
+import logo from '../../images/logo.png';
+
+import { Header, Link, Loading, BtnWrap } from './SharedLayout.styled';
 
 const SharedLayout = () => {
   return (
-    <Container>
+    <>
       <Header>
-        <nav>
-          <Link to="/" end>
-            Home
-          </Link>
-          <Link to="/movies">Movies</Link>
-        </nav>
-        <Logo>
-          <span role="img" aria-label="movie icon">
-            🎬
-          </span>
-          MOVIE ROOM
-        </Logo>
+        <Container>
+          <nav>
+            <NavLink to="/" end>
+              <img src={logo} alt="" style={{ height: '40px' }} />
+            </NavLink>
+            <BtnWrap>
+              <Link to="/" end>
+                Home
+              </Link>
+              <Link to="/movies" end>
+                Movies
+              </Link>
+            </BtnWrap>
+          </nav>
+        </Container>
       </Header>
+
       <Suspense
         color={'#301934'}
         loading={true}
@@ -27,7 +37,7 @@ const SharedLayout = () => {
       >
         <Outlet />
       </Suspense>
-    </Container>
+    </>
   );
 };
 

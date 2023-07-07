@@ -27,7 +27,7 @@ const SharedLayout = () => {
       </Header>
 
       <Suspense
-        color={'#301934'}
+        color={'#e50914'}
         loading={true}
         fallback={<Loading aria-label="Loading Spinner" data-testid="loader" />}
       >

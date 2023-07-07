@@ -43,7 +43,7 @@ const Movies = () => {
 
   return (
     <Main>
-      <MoviesSection style={{ marginTop: '80px' }}>
+      <MoviesSection>
         <Container>
           <SearchBox
             value={query}

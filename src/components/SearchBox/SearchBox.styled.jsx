@@ -1,42 +1,33 @@
 import styled from 'styled-components';
 
+import { BsSearch } from 'react-icons/bs';
+
 export const SearchForm = styled.form`
   margin-bottom: 40px;
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 600px;
-  border-bottom: 1px solid #e6e6fa;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  border-radius: 3px;
-  overflow: hidden;
+  box-shadow: 8px 5px 16px 0 rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  background-image: linear-gradient(90deg, #333 5%, #181818 95%);
 `;
 
-export const SearchButton = styled.button`
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  border: 0;
-  opacity: 0.6;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  outline: none;
-  &:hover {
-    opacity: 1;
-  }
+export const SearchButton = styled.button``;
+
+export const Search = styled(BsSearch)`
+  color: #e50914;
 `;
 
 export const SearchInput = styled.input`
+  color: #fff;
   display: inline-block;
   width: 100%;
   font: inherit;
-  font-size: 14px;
-  border: none;
-  outline: none;
-  padding-left: 4px;
-  padding-right: 4px;
+  font-size: 18px;
   &::placeholder {
     font: inherit;
+    color: #fff;
+    font-weight: 700;
     font-size: 18px;
   }
 `;

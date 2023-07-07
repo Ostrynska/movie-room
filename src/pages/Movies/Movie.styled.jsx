@@ -7,4 +7,6 @@ export const Main = styled.main`
   margin: 0px;
 `;
 
-export const MoviesSection = styled.section``;
+export const MoviesSection = styled.section`
+  margin-top: 80px;
+`;

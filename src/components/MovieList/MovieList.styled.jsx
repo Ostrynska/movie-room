@@ -31,7 +31,7 @@ export const MovieTitle = styled.h2`
 
 export const MoviePoster = styled.img`
   width: 100%;
-  height: auto;
+  height: 221px;
   border: 1px solid #797979;
   border-radius: 5px;
   margin-bottom: 10px;

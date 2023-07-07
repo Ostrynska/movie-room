@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 
-import { IconContext } from 'react-icons';
-import { BsSearch } from 'react-icons/bs';
-
-import { SearchForm, SearchButton, SearchInput } from './SearchBox.styled';
+import {
+  SearchForm,
+  SearchButton,
+  SearchInput,
+  Search,
+} from './SearchBox.styled';
 
 const SearchBox = ({ value, onChange, onSubmit }) => {
   return (
@@ -15,12 +17,10 @@ const SearchBox = ({ value, onChange, onSubmit }) => {
         onChange={onChange}
         autocomplete="off"
         autoFocus
-        placeholder="Movie name..."
+        placeholder="Watch all you want..."
       />
       <SearchButton type="submit">
-        <IconContext.Provider value={{ size: '20px' }}>
-          <BsSearch />
-        </IconContext.Provider>
+        <Search size={20} />
       </SearchButton>
     </SearchForm>
   );

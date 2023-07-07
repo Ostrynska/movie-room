@@ -1,11 +1,16 @@
+import { Container } from '../Container/Container';
 import { Main, NotFoundTitle } from './NotFound.styled';
 
 const NotFound = () => {
   return (
     <Main>
-      <NotFoundTitle>
-        The page you were looking for does not exist
-      </NotFoundTitle>
+      <section style={{ marginTop: '80px', height: '83vh' }}>
+        <Container>
+          <NotFoundTitle>
+            The page you were looking for does not exist
+          </NotFoundTitle>
+        </Container>
+      </section>
     </Main>
   );
 };

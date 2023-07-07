@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const CastSection = styled.section`
   padding: 1rem 0rem;
   color: #a3a3a3;
+  display: flex;
+  justify-content: center;
 `;
 
 export const CastImageWrapp = styled.div`

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { toast } from 'react-hot-toast';
 
@@ -10,6 +11,7 @@ import { Main, SectionTitle, SectionText, Title } from '../Home/Home.styled';
 
 const Home = () => {
   const [trending, setTrending] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     renderTrending();
@@ -35,7 +37,9 @@ const Home = () => {
             to experience.
           </SectionText>
           <Title>Popular on Movie Room</Title>
-          <MovieList movies={trending} />
+          {trending?.length > 0 && (
+            <MovieList movies={trending} location={location} />
+          )}
         </Container>
       </section>
     </Main>

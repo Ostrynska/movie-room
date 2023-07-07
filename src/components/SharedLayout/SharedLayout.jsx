@@ -15,16 +15,12 @@ const SharedLayout = () => {
       <Header>
         <Container>
           <nav>
-            <NavLink to="/" end>
+            <NavLink to="/">
               <img src={logo} alt="" style={{ height: '40px' }} />
             </NavLink>
             <BtnWrap>
-              <Link to="/" end>
-                Home
-              </Link>
-              <Link to="/movies" end>
-                Movies
-              </Link>
+              <Link to="/">Home</Link>
+              <Link to="movies">Movies</Link>
             </BtnWrap>
           </nav>
         </Container>

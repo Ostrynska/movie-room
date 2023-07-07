@@ -32,23 +32,45 @@ export const Main = styled.main`
 
 export const MovieCard = styled.div`
   display: flex;
+  align-items: center;
+  flex-direction: column;
   padding: 2rem 0 3rem 0;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    padding: 2rem 0 3rem 0;
+  }
 `;
 
 export const MovieImage = styled.img`
   border-radius: 2px;
-  ${
-    '' /* width: 415px;
-  height: auto; */
+  margin-bottom: 1rem;
+  @media screen and (min-width: 768px) {
+    width: fit-content;
+  }
+  @media screen and (min-width: 1200px) {
+    width: auto;
+    margin-bottom: 0;
   }
 `;
 
 export const MovieInformation = styled.div`
-  margin-left: 5.5rem;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 250px;
+  @media screen and (min-width: 420px) {
+    max-width: 300px;
+  }
+  @media screen and (min-width: 480px) {
+    max-width: 400px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 500px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 5.5rem;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const MovieTitle = styled.h2`

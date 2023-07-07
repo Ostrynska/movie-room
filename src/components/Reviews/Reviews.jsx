@@ -44,7 +44,7 @@ const Reviews = () => {
         {reviews.map(({ author, content, id }) => {
           return (
             <ReviewsListItem key={id}>
-              <ReviewsAuthor>Author: {author}</ReviewsAuthor>
+              <ReviewsAuthor>@{author}</ReviewsAuthor>
               <Text>{content}</Text>
             </ReviewsListItem>
           );

@@ -61,7 +61,7 @@ const Cast = () => {
               </CastImageWrapp>
               <TextWrapp>
                 <TextAccent>{name}</TextAccent>
-                <Text>Character: {character}</Text>
+                {character.length !== 0 && <Text>{character}</Text>}
               </TextWrapp>
             </CastListItem>
           );

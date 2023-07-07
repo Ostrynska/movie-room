@@ -7,7 +7,7 @@ import { Container } from '../Container/Container';
 
 import logo from '../../images/logo.png';
 
-import { Header, Link, Loading, BtnWrap } from './SharedLayout.styled';
+import { Header, Link, Loading, BtnWrap, Footer } from './SharedLayout.styled';
 
 const SharedLayout = () => {
   return (
@@ -37,6 +37,10 @@ const SharedLayout = () => {
       >
         <Outlet />
       </Suspense>
+      <Footer>
+        © 2022-{new Date().getFullYear()} <strong>MovieRoom</strong>. All rigths
+        reserved
+      </Footer>
     </>
   );
 };

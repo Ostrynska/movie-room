@@ -5,6 +5,8 @@ import { toast } from 'react-hot-toast';
 
 import * as API from '../../services/api';
 
+import { Container } from '../../components/Container/Container';
+
 import {
   Loading,
   ButtonLink,
@@ -51,48 +53,58 @@ const MovieDetails = () => {
 
   return (
     <Main>
-      <ButtonLink type="button" to={from}>
-        Go back
-      </ButtonLink>
-      <MovieCard>
-        <MovieImage
-          src={poster_path ? `${baseURL}${poster_path}` : defaultPosterImage}
-          alt={title}
-        />
-        <MovieInformation>
-          <MovieTitle>
-            {title} ({releaseYear})
-          </MovieTitle>
-          <Text>
-            <TextAccent>User Score</TextAccent>
-            <TextScore>{score}%</TextScore>
-          </Text>
-          <MovieSubTitle>Overview</MovieSubTitle>
-          <Text>{overview}</Text>
-          <MovieSubTitle>Genres</MovieSubTitle>
-          <Text>{genres && genres.map(genre => genre.name).join(', ')}</Text>
-          <MovieSubTitle>Additional Information</MovieSubTitle>
-          <AdditionalList>
-            <AdditionalItem>
-              <AdditionalItemLink to="cast" state={{ from }}>
-                Cast
-              </AdditionalItemLink>
-            </AdditionalItem>
-            <AdditionalItem>
-              <AdditionalItemLink to="reviews" state={{ from }}>
-                Reviews
-              </AdditionalItemLink>
-            </AdditionalItem>
-          </AdditionalList>
-        </MovieInformation>
-      </MovieCard>
-      <Suspense
-        color={'#301934'}
-        loading={true}
-        fallback={<Loading aria-label="Loading Spinner" data-testid="loader" />}
-      >
-        <Outlet />
-      </Suspense>
+      <section style={{ marginTop: '80px' }}>
+        <Container>
+          <ButtonLink type="button" to={from}>
+            Go back
+          </ButtonLink>
+          <MovieCard>
+            <MovieImage
+              src={
+                poster_path ? `${baseURL}${poster_path}` : defaultPosterImage
+              }
+              alt={title}
+            />
+            <MovieInformation>
+              <MovieTitle>
+                <span>{title}</span> {releaseYear}
+              </MovieTitle>
+              <Text>
+                <TextAccent>User Score |</TextAccent>
+                <TextScore>{score}%</TextScore>
+              </Text>
+              <MovieSubTitle>Overview</MovieSubTitle>
+              <Text>{overview}</Text>
+              <MovieSubTitle>Genres</MovieSubTitle>
+              <Text>
+                {genres && genres.map(genre => genre.name).join(', ')}
+              </Text>
+              <MovieSubTitle>Additional Information</MovieSubTitle>
+              <AdditionalList>
+                <AdditionalItem>
+                  <AdditionalItemLink to="cast" state={{ from }}>
+                    Cast
+                  </AdditionalItemLink>
+                </AdditionalItem>
+                <AdditionalItem>
+                  <AdditionalItemLink to="reviews" state={{ from }}>
+                    Reviews
+                  </AdditionalItemLink>
+                </AdditionalItem>
+              </AdditionalList>
+            </MovieInformation>
+          </MovieCard>
+          <Suspense
+            color={'#301934'}
+            loading={true}
+            fallback={
+              <Loading aria-label="Loading Spinner" data-testid="loader" />
+            }
+          >
+            <Outlet />
+          </Suspense>
+        </Container>
+      </section>
     </Main>
   );
 };

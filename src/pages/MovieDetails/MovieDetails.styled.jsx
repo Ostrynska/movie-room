@@ -1,27 +1,25 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import BeatLoader from 'react-spinners/BeatLoader';
 
 export const ButtonLink = styled(Link)`
-  padding: 0;
+  min-height: 0;
+  font-size: 14px;
+  padding: 9px 20px;
+  background-color: #e50914;
+  background-image: linear-gradient(180deg, #e50914, #db0510);
+  color: #fff;
+
+  border-radius: 2px;
   border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  color: white;
-  border-radius: 7px;
-  padding: 0.375rem;
-  height: 1.5rem;
-  width: auto;
-  font-size: 0.75rem;
-  background-color: #301934;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  :hover {
-    color: #000;
-    background-color: #f5f4fa;
-    box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%),
-      0px 2px 2px rgb(0 0 0 / 12%);
+  &:hover {
+    background: #f40612;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
   }
 `;
 
@@ -33,55 +31,57 @@ export const Main = styled.main`
 `;
 
 export const MovieCard = styled.div`
-  margin-top: 1rem;
   display: flex;
-  padding: 3rem 15rem;
-  flex-grow: 1;
-  justify-content: center;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 2rem 0 3rem 0;
 `;
 
 export const MovieImage = styled.img`
-  border-radius: 10px;
-  width: 350px;
-  height: auto;
+  border-radius: 2px;
+  ${
+    '' /* width: 415px;
+  height: auto; */
+  }
 `;
 
 export const MovieInformation = styled.div`
-  display: block;
-  margin-left: 3.5rem;
+  margin-left: 5.5rem;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const MovieTitle = styled.h2`
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1;
   margin-bottom: 2rem;
-  color: #301934;
+  color: #fff;
+  span {
+    color: #e50914;
+    font-size: 3rem;
+  }
 `;
 
 export const MovieSubTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #301934;
+  color: #fff;
 `;
 
 export const Text = styled.p`
   font-size: 1.05rem;
   line-height: 1.5;
   margin-bottom: 1rem;
+  color: #a3a3a3;
 `;
 
 export const TextAccent = styled.span`
-  color: white;
-  background-color: #301934;
-  text-transform: uppercase;
-  padding: 0.3rem;
-  border-radius: 10px;
+  color: #a3a3a3;
 `;
 
 export const TextScore = styled.span`
-  margin-left: 10px;
-  font-weight: 700;
+  margin-left: 5px;
+  color: #e50914;
 `;
 
 export const AdditionalList = styled.ul`
@@ -89,29 +89,28 @@ export const AdditionalList = styled.ul`
 `;
 
 export const AdditionalItem = styled.li`
-  width: 80px;
-  text-align: center;
-  border: 1px solid #301934;
-  padding: 0.3rem;
-  border-radius: 10px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  :last-child {
+  margin-top: 10px;
+  &:last-child {
     margin-left: 1rem;
-  }
-  :hover {
-    border: none;
-    background-color: #e6e6fa;
-    box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%),
-      0px 2px 2px rgb(0 0 0 / 12%);
   }
 `;
 
-export const AdditionalItemLink = styled(Link)`
-  color: #301934;
-  font-weight: 500;
-  :hover {
-    font-weight: 600;
-    color: #301934;
+export const AdditionalItemLink = styled(NavLink)`
+  color: #000;
+  border: 1px solid #888;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 400;
+  padding: 9px 20px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    border: none;
+    background-color: #f40612;
+  }
+  &.active {
+    border: none;
+    background-color: #f40612;
   }
 `;
 

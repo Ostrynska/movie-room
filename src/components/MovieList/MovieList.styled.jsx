@@ -4,13 +4,13 @@ import styled from 'styled-components';
 export const MovieListWrapp = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 40px;
+  gap: 15px 28px;
   align-items: stretch;
   justify-content: center;
 `;
 
 export const MovieListItem = styled.li`
-  max-width: 200px;
+  max-width: 148px;
   transition: transform 0.15s ease-in-out;
   :hover {
     transform: scale(1.05);

@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import BeatLoader from 'react-spinners/BeatLoader';
 
 export const Header = styled.header`
-  ${'' /* height: 24 px; */}
   left: 0;
   right: 0;
   top: 0;
@@ -11,7 +10,7 @@ export const Header = styled.header`
   background-color: #000;
   display: flex;
   justify-content: space-between;
-  padding: 16px 3%;
+  padding: 16px 2%;
   position: fixed;
   nav {
     display: flex;
@@ -42,6 +41,10 @@ export const Link = styled(NavLink)`
     display: inline-block;
     font-weight: 400;
     text-align: center;
+    &:hover {
+      background: #f40612;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    }
   }
 `;
 
@@ -58,4 +61,15 @@ export const Loading = styled(BeatLoader)`
   justify-content: center;
   align-items: center;
   size: 150px;
+`;
+
+export const Footer = styled.footer`
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
 `;

@@ -5,18 +5,7 @@ export const CastSection = styled.section`
   color: #a3a3a3;
   display: flex;
   justify-content: stretch;
-  @media screen and (min-width: 420px) {
-    max-width: 300px;
-  }
-  @media screen and (min-width: 480px) {
-    max-width: 400px;
-  }
-  @media screen and (min-width: 768px) {
-    max-width: 500px;
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 900px;
-  }
+  max-width: 100%;
 `;
 
 export const CastImageWrapp = styled.div`

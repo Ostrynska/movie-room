@@ -28,8 +28,8 @@ export const CastListWrapp = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  align-items: stretch;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const CastListItem = styled.li`

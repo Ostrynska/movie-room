@@ -4,7 +4,7 @@ export const CastSection = styled.section`
   padding: 1rem 0rem;
   color: #a3a3a3;
   display: flex;
-  justify-content: stretch;
+  justify-content: center;
   max-width: 100%;
 `;
 
